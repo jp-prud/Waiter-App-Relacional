@@ -3,21 +3,25 @@
  
 Anteriormente a pandemia, os **aplicativos de delivery** já demonstravam um características que poderia alterar o **comportamento do consumidor**: a flexíbilidade de solicitar comida para os restaurantes gerou um movimento ainda maior e cada vez mais frequentes de deliverys. E isso provocou um novo perfil de consumo para o **segmento gastronômico**, especialmente para os estabelecimentos físicos.
 
-Contudo, para estar investindo em plataformas de delivery, é necessário que o dono do estabelecimento possua um "capital de giro" considerável, para não sofrer prejuízos, pois, em alguns aplicativos, como o "Ifood" e o "Rappi", as taxas de utilização podem variar em até 25% do preço do produto ([Abrasel](https://abrasel.com.br/revista/mercado-e-tendencias/restaurantes-adotam-sistema-proprio-de-entrega-para-fugir-de-taxas-de-apps/) - 2022). 
+A principal visão acerca de aplicações de delivery entorno do mercado de software é bem vasta, visto que possue inúmeros aplicativos que tem como objetivo auxiliar, de alguma forma, a compra de produtos alimentíceos.
 
-A partir da formulação do problema, a proposta de solução é apresentada através do desenvolvimento do aplicativo Waiter”, cujo objetivo principal é a facilitação e a integração, para que o consumidor final possa estar solicitando o seu produto e, em tempo real, as informações que dizem respeito ao pedido serem visualizadas dentro do sistema interno do restaurante.
+Contudo, para estar investindo em plataformas de delivery, é necessário que o dono do estabelecimento possua um "capital de giro" considerável, para não sofrer prejuízos, pois, em alguns aplicativos que criaram um grande monopólio no setor, como o "Ifood" e o "Rappi", possuem taxas de utilização que podem variar em até 25% do preço do produto ([Abrasel](https://abrasel.com.br/revista/mercado-e-tendencias/restaurantes-adotam-sistema-proprio-de-entrega-para-fugir-de-taxas-de-apps/) - 2022).
 
-O sistema irá possuir diversas funcionalidades, dentre elas a possibilidade do cliente final estar realizando a compra de comida a partir do App Mobile, a integração em tempo real dos pedidos dentro do Dashboard do Restaurante.
+Conclui-se que a necessidade da criação de um sistema que integre o consumidor-final com o restaurante é de alta valia, já que permitirá que o consumidor esteja solicitando um produto rapidamente.
 
+A partir disto, a fomentação de outras soluções para aplicativos de delivery tornou-se cada vez maior. A resoluçãp de tal problemática é apresentada através do desenvolvimento do aplicativo "WaiterApp”, cujo objetivo principal é facilitar a integração entre o consumidor final, que terá a possibilidade de estar solicitando o seu produto através da plataforma "Mobile" e, em tempo real, as informações que dizem respeito ao pedido serem visualizadas dentro do sistema interno do restaurante, tal sistema será uma aplicação "WEB".
+
+Dentre as O sistema irá possuir diversas funcionalidades, dentre elas a possibilidade do cliente final estar realizando a compra de comida a partir do App Mobile, a visualização do histórico de pedios e a integração em tempo real dos pedidos dentro do Dashboard do Restaurante.
 
 ## Tecnologias Utilizadas
 
-**Client:** React, React Native, Expo, Styled-Components.
+**Mobile:** React, React Native, Typescript, Expo, Styled-Components
+
+**Client:** React, Vite, Styled-Components, Web-Sockets.
 
 **Server:** Node, Express.
 
 **Database:** PostgreSQL.
-
 
 ## API Reference
 
@@ -124,7 +128,7 @@ O sistema irá possuir diversas funcionalidades, dentre elas a possibilidade do 
 | `orderId`      | `number` | **Obrigatório**. ID do pedido       |
 | `status`      | `enum` | **Obrigatório**. Status do Pedido - 'WAITING', 'IN_PRODUCTION', 'DONE    |
 
-#### Delete or Cancel order
+#### Deletar ou Alterar Status do Pedido
 
 ```bash
   DELETE /orders/:orderId
